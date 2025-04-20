@@ -1,28 +1,52 @@
 #include<iostream>
 #include "FilesManager.h"
+#include"Menu.h"
 #include<sstream>
 #include<fstream>
 #include<SFML/Graphics.hpp>
+#include<SFML/Audio.hpp>
+#include<vector>
+#include<iomanip>
+#include<random>
+
 using namespace std;
 using namespace sf;
 
 int main() {
 
 
-	RenderWindow window(VideoMode(1280, 720), "Sfml sucks");
-    while (window.isOpen())
+    RenderWindow mywindow(VideoMode(1200, 600), "Game");
+    Menu menu(1200, 600);
+    while (mywindow.isOpen())
     {
         Event event;
-        while (window.pollEvent(event))
+        while (mywindow.pollEvent(event))
         {
             if (event.type == Event::Closed) {
-                window.close();
+                mywindow.close();
+                break;
+            }
+            if (event.type == Event::KeyPressed) {
+                if (event.key.code == Keyboard::Up)
+                {
+                    menu.MoveUp();
+                }
+                if (event.key.code == Keyboard::Down)
+                {
+                    menu.MoveDown();
+                }
             }
         }
+
+        mywindow.clear();
+        menu.draw(mywindow);
+        mywindow.display();
     }
-    window.clear();
-    window.display();
-    /*
+
+
+
+
+    /*   ====files test===(ignore pls <3)
     FileManager myfileman;
     int highscore = myfileman.loadHighscore();
     cout <<  highscore;
