@@ -25,5 +25,8 @@ private:
 	Music music;
 	Sprite pacmanIcon;
 	Texture pacmanTexture;
+	Texture backgroundTexture;
+	Sprite backgroundSprite;
+
 
 };

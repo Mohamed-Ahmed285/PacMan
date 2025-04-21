@@ -8,6 +8,22 @@ using namespace sf;
 
 Menu::Menu(float width, float height) {
 
+    if (!backgroundTexture.loadFromFile("assets/pics/bg.jpg")) {
+        std::cerr << "Failed to load background!" << std::endl;
+    }
+    else {
+        backgroundSprite.setTexture(backgroundTexture);
+
+        // Scale background to match the window
+
+        sf::Vector2u textureSize = backgroundTexture.getSize();
+       backgroundSprite.setScale(
+            1200.0f / textureSize.x,
+            600.0f / textureSize.y
+        );
+    }
+
+
     // Load title image
     if (!tex.loadFromFile("assets/pics/title.png")) {
         std::cerr << "Failed to load image!" << std::endl;
@@ -77,6 +93,7 @@ void Menu::setSelected(int n) {
 void Menu::draw(RenderWindow& window) {
     // Get the position of the selected menu item
     Vector2f selectedPos = mainmenu[selected].getPosition();
+    window.draw(backgroundSprite);
 
     // Place Pac-Man slightly to the left of the text
     pacmanIcon.setPosition(selectedPos.x - 180, selectedPos.y - 12); // Adjust offsets as needed
