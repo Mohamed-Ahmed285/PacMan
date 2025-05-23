@@ -1,0 +1,3 @@
+ghosts house door : #fcb5ff
+walls : #2121ff
+background : #000000 (black)
