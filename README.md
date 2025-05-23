@@ -4,6 +4,21 @@ A classic Pac-Man clone built in C++ with SFML — tile-based maps, ghost AI, an
 video recording demonstrating the gameplay : https://github.com/user-attachments/assets/20f42a3c-b30f-48a4-aaa9-58735289f164
 
 
+#### Features
+
+ - Classic maze‑chase gameplay with pellets, power pellets and ghost AI.
+
+ - Tile‑based renderer (20px tiles) powered by SFML textures and sprites.
+
+ - Flexible level system: easily add new stages by dropping .txt map files.
+
+ - Two ready‑made maps: Level 1 (original layout) & Level 2 (custom layout converted from image).
+
+ - Retro sound effects & background music.
+
+ - Pause, restart, and game‑over screens.
+
+
 ## 📸 Menus
 
 ### Main Menu
