@@ -8,6 +8,10 @@ video recording demonstrating the gameplay : https://github.com/user-attachments
 
 ### Main Menu
 
+![Image](https://github.com/user-attachments/assets/69f28230-9a6a-4af0-88e8-c5b57571d2df)
+
+### Difficulty Selection Menu
+
 ![Image](https://github.com/user-attachments/assets/21ecab3c-1708-4221-9a0d-3d73be3b7570)
 
 ### Instructions Menu
